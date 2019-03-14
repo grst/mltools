@@ -7,8 +7,14 @@ def mcc(TP, FN, FP, TN):
 def sens(TP, FN, FP, TN):
     return TP / (TP + FN)
 
+def recall(TP, FN, FP, TN):
+    return sens(TP, FN, FP, TN)
+
 def spec(TP, FN, FP, TN):
     return TN / (TN + FP)
+
+def prec(TP, FN, FP, TN):
+    return TP / (TP + FP)
 
 def prec_pos(TP, FN, FP, TN):
     return np.divide(TP, (TP + FP))

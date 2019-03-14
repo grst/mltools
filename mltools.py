@@ -6,6 +6,7 @@
 
 import math
 import numpy as np
+import random
 
 def seq2binvec(seq):
     """creates binary features such as A = [1,0,0,0] for a list of nucleotides"""
@@ -62,3 +63,9 @@ def smooth_forward(array, size):
     for i in range(len(array)):
         array_sm.append(np.mean(tmp_array[i:i+size]))
     return array_sm
+
+def stderr(array):
+    return np.std(array) / np.sqrt(len(array))
+
+def randsample(instances, fraction=0.5):
+    return random.sample(instances, int(fraction*len(instances)))

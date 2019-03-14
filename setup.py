@@ -7,7 +7,7 @@ setup(name='mltools',
       description='some helper functions for machine learning',
       author='Gregor Sturm',
       author_email='mail@gregor-sturm.de',
-      py_modules=['mltools'],
+      py_modules=['mltools.mltools', 'mltools.perfmeasures', 'mltools.weka'],
       install_requires=[
       ],
      )
